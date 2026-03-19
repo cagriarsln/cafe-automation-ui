@@ -1,0 +1,1141 @@
+
+:root {
+    --background-color: #e8edf3;  
+    --button1-color: #1f908e;
+    --button1-hover-color: #0b4746;
+    --button2-color: #5375cb;
+    --button2-hover-color: #102355;
+    --button-text-color:#ffffff;
+    --primary-color: #ffffff;
+    --font-family: 'Arial', sans-serif;
+    --button-radius: 15px;
+    --text-color: black; 
+    --border-color: #877770;
+    --header-color: #ffff;
+    --kart-rengi: #ffffff;
+    --masabuton-color: #ffff;   
+  }
+
+  
+
+
+body {
+    padding: 100px 0px 20px;
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    width: 100%vw;
+    color: var(--text-color);
+}
+
+body.karanlik-tema{
+--background-color: #121212;
+--button1-color: #def8f7;
+--button1-hover-color: #315655;
+--button2-color: #636363;
+--button2-hover-color: #4c4b4b;
+--button-text-color: #000000;
+--primary-color: #1e1e1e;
+--font-family: 'Arial', sans-serif;
+--button-radius: 15px;
+--text-color: #f0f0f0;
+--border-color: #444444;
+--header-color: #1a1a1a;
+--kart-rengi: #1e1e1e;
+--masabuton-color: #2a2a2a;
+}
+
+
+header {
+    background-color: var(--header-color);
+    color: var(--text-color);
+    border-bottom: 0.5px solid var(--border-color);
+    padding: 10px; 
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    position: fixed;
+    font-weight: bold;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    width: 100vw;
+    z-index: 1000; /* her şeyin üstünde kalması için*/
+    top: 0;
+    
+}
+
+header h2{
+    position: absolute;
+    left: 43%;
+    
+}
+
+header a{
+    text-decoration: none;
+    position: relative;
+    left: 40px;
+    top: 5px;
+    color: var(--text-color);
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+header a:hover{
+    scale: 108%;
+    text-decoration:underline;
+
+}
+
+
+.logo {
+    background-color: white;
+    margin-top:5px;
+    margin-left:10px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.header-title {
+    font-family: 'Pacifico', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    
+}
+
+#tema-buton{
+    position: absolute;
+    left: 91%;
+    top: 6%;
+    z-index: 10005;
+    font-size: 20px;
+    background-color: var(--background-color);
+    color: var(--button-text-color);
+    transform: 0.5s;
+}
+
+#tema-buton:hover{
+    scale: 125%;
+    
+}
+
+/*Menü seçenekleri (örneğin yemekler içecekler vs.) burda*/
+
+.menu{ 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; 
+    margin: 30px auto;
+    width: 80%;
+}
+
+.menu-container {
+    text-align: center;
+    margin:30px;
+    margin-bottom: 10px;
+    display: inline-block;
+    background-color: var(--background-color); 
+    border-radius: 10px;
+    width: 200px;
+    max-width: 600px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-container:hover {
+    transform: scale(1.02);
+}
+
+.menu-link {
+    color: var(--text-color); 
+    font-size: 10px;
+    margin: 0px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu-container-image{
+    width: 100%;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.order-btn {
+    background-color: var(--button1-color); 
+    color: var(--button-text-color);
+}
+
+.order-btn:hover {
+    background-color: var(--button1-hover-color); 
+    transform: scale(1.1);
+}
+
+.fast-order-btn {
+    background-color: var(--button2-color); 
+    color: var(--button-text-color);
+}
+
+.fast-order-btn:hover {
+    background-color: var(--button2-hover-color); 
+    transform: scale(1.1);
+}
+
+
+.menu-urun{
+    margin-top: 10px;
+    display: flex;
+    position:relative;
+    align-items: center;
+    justify-content: flex-start; /* Öğeleri sola hizalar */
+    gap: 20px; /* Resim ve metin arasına boşluk */
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 2px var(--border-color);
+    background-color: var(--kart-rengi);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    width: 80%; /* Sayfada çok yayılmaması için */
+    max-width: 800px; /* Maksimum genişlik */
+    margin-left:auto;
+    margin-right: auto;
+    transition: 0.7s;
+}
+.menu-urun:hover{
+    scale: 105%;
+}
+
+.menu-image {
+    width: 120px; 
+    height: 100%; 
+    border-radius: 20px;
+    border-right: 3px solid #ccc;
+    object-fit: cover; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; 
+    flex-direction: column;
+}
+.menu-image p{
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding: 0px 1px;
+    position: absolute;
+    bottom: -5px;
+    margin-top: 15px; 
+    font-size: 14px;
+    border-radius: 5px;
+    scale: 130%;
+    
+}
+
+.menu-image img {
+    max-width: 100%; 
+    max-height: 100%;
+    object-fit: cover; 
+}
+
+.urun-icerik h2 {
+    margin-bottom:10px;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.urun-icerik p{
+    font-size:14px;
+    color: var(--text-color);
+    margin-bottom:15px;
+    text-decoration: none;
+}
+
+.urun-buton{
+
+    display:flex;
+    gap:10px;
+}
+
+.hamburger-bilgi{
+    text-decoration: none;
+}
+
+/*Yan bar burda ayarlandı*/
+
+.yan-bar-isareti{
+    font-size:30px;
+    cursor:pointer;
+    position:fixed;
+    right: 35px;
+    top:5px;
+    z-index:1002;
+}
+
+
+.yan-bar{
+    
+    width: 50%; /*Genişliği sayfanın yarısı kadar olcak şekilde ayarladım*/
+    height: 100vh; 
+    background-color:  var(--background-color);
+    position:fixed;
+    border-top-left-radius: 15px;
+    top:0; right: -60%;
+    transition: right 0.3s ease-in-out; /*Yan barı açarken yumuşaklık sağlar*/
+    z-index:1001;
+    padding:20px;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 1);
+    padding-bottom: 10%;
+
+}
+.yan-bar.active{
+    right:0;
+    
+}
+
+
+/*Yan bardaki kutucuklar burda ayarlandı*/
+.yan-bar-bilgi{
+    
+    background-color: var(--kart-rengi);
+    width: 82%;
+    border-radius: 30px;
+    margin-top: 25px;
+    padding: 10px;
+    z-index: 1003;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.5);
+    margin-bottom: 25px;
+ 
+}
+
+ #yan-bar-bilgi-alt{
+    margin-bottom: 50px;
+ }
+
+/*yan bar butonları burda ayarlandı*/
+
+.yanbar-btn1{
+    background-color: var(--button1-color);
+    color: var(--button-text-color);
+    transition: transform 0.5s; 
+    padding: 5px 10px ;
+    border-radius: 10px;
+    font-size: 15px;
+   
+    
+}
+
+.yanbar-btn1:hover{
+    background-color: var(--button1-hover-color);
+    transform: scale(1.03); 
+}
+
+.yanbar-btn2 {
+    background-color: var(--button2-color);
+    color: var(--button-text-color);
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: transform 0.5s; 
+}
+
+.yanbar-btn2:hover {   
+    background-color: var(--button2-hover-color);
+    transform: scale(1.03); 
+}
+
+/*Açılan bazı pencereler için ortak class*/
+.pencere {
+
+    display: none;
+    position:fixed;
+    z-index: 1003;
+    left: 10%;
+    top: 20%;
+    transform: translate(-50%,-50%);
+    width: 430px;
+    padding-bottom: 30px;
+    padding-top: 60px;
+    background: var(--background-color);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    transform: scale(0.9);
+}
+
+.pencere.active{
+    transform: scale(1);
+    opacity: 1;
+}
+
+/*Sepeti onayla butonundan sonra açılacak olan kısım*/
+#sepet-onaylandi-pencere{
+    display: none;
+    width: 430px;
+    border: 1px solid;
+    position: absolute;
+    left: 35%;
+    top: 30%;
+    z-index: 1005;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    text-align: center;
+    background-color: var(--kart-rengi);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+}
+
+/*zaman çubuğu kısmı*/
+.zaman-cubugu-kapsayici {
+    width: 90%;
+    height: 6px;
+    background-color: var(--background-color);
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 15px auto;
+  }
+  
+  .zaman-cubugu {
+    height: 100%;
+    width: 100%;
+    background-color: var(--button1-color);
+    animation: zamanAzalt 3s linear forwards;
+  }
+  
+  @keyframes zamanAzalt {
+    from {
+      width: 90%;
+    }
+    to {
+      width: 0%;
+    }
+  }
+
+
+/* Sepet Detayı kısmı burda ayarlandı*/
+
+/*ürünlerin içinde bulunduğu kutucuk burda ayarlandı. Kutucuğun bulunduğu pencere ise yukarıda .pencere classında ayarlandı.*/
+.sepet-icerik{
+    box-shadow: 0px 1px 3px rgba(0,0,0,1);
+    border-radius: 20px;
+    border: 2px var(--input-border);
+    width: 90%;
+    position: relative;
+    left: 15px;
+    height: 250px;
+    padding: 30px 0px;
+    overflow-y:auto;
+    margin-bottom : 20px;
+    margin-top: -10px;
+}
+
+/*her bir ürün kutucuğu burdan ayarlandı*/
+.sepet-urun{
+    border: 2px var(--border-color);
+    justify-content: flex-start;
+    border-radius: 10px;
+    display:flex;
+    align-items: center;
+    width: 94%;
+    box-shadow: 0px 1px 3px rgba(0,0,0,1);
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 3%;
+}
+
+/*Sepette ürünün resminin konumu boyutu vs. burda ayarlandı.*/
+.sepet-urun-img{
+    width: 20%; 
+    height: 100%; 
+    border-radius: 15px;
+    border-right: 3px solid rgb(156, 156, 156);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* Resmin çerçeveden taşmasını engeller */
+    flex-direction: column;
+}
+.sepet-urun-icerik {
+    display: block;
+    position: relative;
+    right: 0px;
+}
+
+.sepet-urun-icerik h3{
+    font-size: 16px;
+    margin:auto;
+    margin-top: 20%;
+    margin-left: 10%;
+}
+.sepet-urun-icerik p{
+    font-size: 14px;
+    display: flex;
+    margin: auto;
+    margin-bottom: 10%;
+    margin-left: 10%;
+}
+
+/*Bu kısımda sepetteki ürünlerin miktarının hangi konumda olacağını ayarladım*/
+.sepet-urun-miktar {
+    position: relative;
+    display: flex;
+    left: 200px;
+    white-space: nowrap;
+    gap: 0px;
+    margin:0;
+    bottom: 20px;
+}
+
+
+/*Bu kısımda sipariş takibi bilgisinin hangi konumda olacağını ayarlıyorum*/
+
+.siparis-urun-durum{
+    position: relative;
+    left: 100px;
+    white-space: nowrap; /*yazının sürekli yan yana olmasını alta inmemesini sağlar*/
+    bottom: 0px;
+    
+}
+
+/*Burda sepetin toplam tutarı ve butonun konumu ayarlandı*/
+.sepet-tamam{
+    display: flex;
+    position: relative;
+    bottom: 10px;
+    font-size: 17px;
+    margin: 5px;
+    padding: 0px;
+    left: 30px;
+}
+.sepet-tamam button{
+   position: absolute;
+   right: 70px;
+   scale: 110%;
+   width: 90px;
+   height: 30px;
+   bottom: 13px;
+}
+ 
+/* Sepet onayı butonları*/
+#onay-evet{
+    padding: 8px 20px;
+    position: absolute;
+    left: 25%;
+    border-radius: 13px;
+    bottom: 5%;
+}
+#onay-hayir{
+    padding: 8px 20px;
+    position: absolute;
+    right: 25%;
+    border-radius: 13px;
+    bottom: 5%;
+}
+
+/* Masa Paneli kısmı*/
+.masa-paneli {
+    display: none;
+    position: absolute; /*butonların konumlarını istediğim gibi bu pencerenin içinde ayarlayabilmek için*/
+    z-index: 1003;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -20%) scale(0.9);
+    width: 400px;
+    height: 400px;
+    background: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .masa-paneli.active {
+    opacity: 1;
+    transform: translate(-50%, -20%) scale(1);
+  }
+  
+  .masabuton-tip1{
+    padding: 15px 20px;
+    background-color: var(--masabuton-color);
+    position: absolute;
+    transition: 0.5s;
+  }
+  .masabuton-tip1:hover{
+      scale: 110%;
+      border: 0.5px solid blue;
+  }
+
+  .masabuton-tip2{
+    padding: 15px 45px;
+    background-color: var(--masabuton-color);
+    position: absolute;
+    transition: 0.5s;
+  }
+  .masabuton-tip2:hover{
+    scale:110%;
+    border: 0.5px solid blue;
+  }
+
+  /*Sepete ekle dedikten sonra açılacak pencere*/
+  
+#sepete-ekle-pencere{
+    position: absolute;
+    left: 30%;
+}
+  #sepete-ekle-pencere h2{
+     text-align: center;
+     position: relative;
+     padding: 0;
+     margin: 0;
+     bottom: 10px;
+  }
+
+  #sepete-ekle-pencere button{
+    position: relative;
+    bottom: 20px;
+    display: block;
+    padding: 8px 20px;
+    border-radius: 10px;
+  }
+
+  /*Sepete ekledikten sonra açılacak pencere*/
+  #sepete-eklendi-btn{
+    position: relative;
+    margin-bottom: 10px;
+    left: 36%;
+  }
+  #sepete-ekle-geri-btn{
+    position: relative;
+    left: 42%;
+  }
+
+  #sepete-eklendi-pencere{
+    display: none;
+    width: 430px;
+    border: 1px solid;
+    position: absolute;
+    left: 35%;
+    top: 30%;
+    z-index: 1005;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    text-align: center;
+    background-color: var(--kart-rengi);
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  }
+  
+  /*Hızlı sipariş kısmı*/
+  .hizli-siparis-penceresi{
+    display: none;
+    position:fixed;
+    z-index: 1003;
+    left: 35%;
+    top: 15%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    padding: 30px;
+    background: var(--background-color);
+    border-radius: 40px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    
+  }
+
+  .hizli-siparis-penceresi.active{
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  
+  .hizli-siparis-urun {
+    position: relative;
+    border: 1px solid var(--border-color);
+    border-radius: 30px;     
+    display: flex; 
+    align-items: center; 
+    
+ 
+  }
+  
+  .hizli-siparis-urun-img {
+    max-width: 50%;
+    max-height: 100%; 
+    border-radius: 20px;
+    border-right: 3px solid var(--border-color);
+    overflow: hidden;
+    
+  }
+
+  .hizli-siparis-urun-img img{
+    max-width: 100%; 
+    border-radius: 30px;
+    max-height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    scale: 120%; 
+  }
+  
+  .hizli-siparis-evet{
+    padding: 8px 20px;
+  }
+  .hizli-siparis-hayir{
+    padding: 8px 20px;
+  }
+  
+  /*Sipariş ve sepet notu texti*/
+
+  .siparis-notu{
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    margin: 10px auto;
+    margin-bottom: 50px;
+    padding: 30px 20%;
+  }
+
+  /*Yapay zeka sesli pencere ve yazılı pencere kısımları*/
+  .yapay-zeka-sesli-pencere {
+    display: none; 
+    width: 400px;
+    height: 450px;
+    z-index: 10005;
+    left: 35%;
+    border-radius: 30px;
+    top: 10%;
+    border: 1px solid var(--border-color);
+    background-color: white;
+    position: absolute;
+    opacity: 0; 
+    transition: all 0.3s ease-in-out; 
+    transform: scale(0.9); 
+}
+
+.yapay-zeka-sesli-pencere.active {
+    opacity: 1; 
+    transform: scale(1); 
+    display: block; 
+}
+
+.yapay-zeka-yazili-pencere{
+    display: none; 
+    width: 400px;
+    height: 450px;
+    z-index: 10005;
+    left: 35%;
+    border-radius: 30px;
+    top: 10%;
+    border: 1px solid var(--border-color);
+    background-color: white;
+    position: absolute;
+    opacity: 1; 
+    transition: all 0.3s ease-in-out; 
+    transform: scale(0.9); 
+}
+
+.yapay-zeka-yazili-pencere.active{
+    opacity: 1; 
+    transform: scale(1); 
+    display: block; 
+}
+
+
+.yapay-zeka-pencere-icerik{
+    border: 1px solid var(--border-color);
+    width: 90%;
+    border-radius: 30px;
+    overflow-y:scroll;
+    position: relative;
+    margin: 10px auto;
+    height: 80%;
+}
+
+.yapay-zeka-butonlari{
+   position: relative;
+   left: 60px;
+   margin-bottom: 20%;
+}
+.yapay-zeka-sohbet{
+    position: relative;
+
+}
+
+#yapay-zeka-mesaj-yaz{
+    position: relative;
+    bottom: 12%;
+    width: 70%;
+    left: 5%;
+    margin-right: 17px;
+    height: 40px;
+    border-radius: 20px;
+}
+
+#yazili-sohbet-btn{
+    position: relative;
+    bottom: 5px;
+}
+#sohbeti-kapat{
+    position: relative;
+    padding: 5px 15px;
+    bottom: 15px;
+    left: 310px;
+}
+ /*Şikayet penceresi kısmı burda*/
+.sikayet-pencere{
+    display: none;
+    position: fixed;
+    z-index: 1005;
+    left: 30%;
+    top: 25%;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.sikayet-penceresi-icerik{
+    background: var(--kart-rengi) ;
+    width: 90%;
+    max-width: 420px;
+    padding: 25px 30px;
+    border-radius: 16px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: acilis 0.3s ease;
+}
+
+.sikayet-kapat{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaa;
+}
+.sikayet-kapat:hover{
+    color : #000;
+}
+
+.sikayet-penceresi-icerik button {
+    background-color: var(--button1-color);
+    color: var(--text-color);
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    left: 300px;
+    font-size: 16px;
+}
+.sikayet-penceresi-icerik button:hover{
+    background-color: var(--button1-hover-color);
+}
+#sikayet-metin{
+    width: 90%;
+    position: relative;
+    margin: 10px auto;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+}
+
+#sikayet-gonder{
+    color: var(--button-text-color);
+}
+
+/*Medya sorgusu başlattım ve ekranı 768px den daha küçük olanlar için bu ayarlar olacak. */
+@media (max-width: 768px) { 
+     
+    
+    .menu-container {
+        width: 95%;
+        margin-bottom: 0px;
+        margin-left: 4px;
+    }
+    button {
+        width: 60%;
+        padding: 5px 5px;
+        border-radius: var(--button-radius);
+    }
+    
+    header h2{
+         font-size: 25px;
+         position:absolute;
+         left: 135px;
+         bottom: 25px;
+    }
+
+    header a{
+      font-size: 15px;
+      position: relative;
+      left: 85px;
+      text-decoration: underline;
+      top: 20px;
+    
+    }
+    .logo{
+        scale: 90%;
+        
+    }
+     
+    #tema-buton{
+        width: 10%;
+        height: 5%;
+        scale: 110%;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.001);
+        left: 85%;
+        padding: 0;
+        top: 5%;
+    }
+
+    .yan-bar-isareti{
+        right: 5px;
+    }
+   
+    .yanbar-btn1{
+        padding: 5px 5px;
+        font-size: 14px;
+        width: 70%;
+        position: relative;
+        left: 15%;
+        white-space: nowrap;
+        margin:5px auto;
+    }
+
+    .yanbar-btn2{
+        padding: 5px 5px ;
+        font-size: 14px;
+        width: 70%;
+        white-space: nowrap;
+        position: relative;
+        left: 15%;
+        margin: 5px auto;
+    }
+   
+     .pencere{
+        width: 300px;
+        position: fixed;
+        right: 15%;
+        top: 30%;
+     }
+
+     #garson-evet{
+        left: 0%;
+     }
+     #garson-hayir{
+        left: 0%;
+        margin-bottom: 20px;
+     }
+    
+     .sepet-icerik{
+        margin-bottom: 50px;
+        margin-top: -40px;
+     }
+     
+     .sepet-urun-icerik{
+        position: relative;
+        right: 0px;
+        
+     }
+     #onay-evet{
+        position: relative;
+        left: 0%;
+
+     }
+     #onay-hayir{
+        position: relative;
+        left: 0%;
+     }
+
+     #sepet-onaylandi-pencere{
+        position: absolute;
+        left: 5%;
+        top: 40%;
+        width: 90%;
+     }
+
+     .zaman-cubugu-kapsayici{
+        position: absolute;
+        width: 90%;
+        left: 5%;
+        
+    }
+    
+    .zaman-cubugu{
+        position: absolute;
+        width: 90%;
+    }
+     
+
+    .sepet-urun-miktar{
+        position: relative;
+        left: 110px;
+        bottom: 25px;
+
+    }
+
+    .siparis-urun-durum{
+        position: relative;
+        left: 20px;
+    }
+
+     .sepet-tamam{
+        display: flex;
+        position: relative;
+        bottom: 30px;
+        font-size: 14px;
+        padding: 0px;
+        left: 10px;
+
+     }
+     .sepet-tamam button{
+        width: 20%;
+        position: absolute;
+        left: 200px;
+        bottom: 7px;
+     }
+     
+     /* Masa paneli kısmınının mobilde nasıl görüneceği burda ayarlandı*/
+    .masa-paneli{
+        width: 400px;
+        position: fixed;
+ 
+        left: 50%;
+        top: 30%;
+    }
+    .masabuton-tip1{
+        width: 13%;
+    }
+    .masabuton-tip2{
+        width: 15%;
+    }
+    #masadegistirEvet{
+        width: 15%;
+        position: relative;
+        left: 0%;
+    }
+    #masadegistirHayir{
+        width: 15%;
+        position: relative;
+        left: 55%;
+
+    }
+
+    #sepete-ekle-pencere{
+        position: absolute;
+        left: 5%;
+        top: 40%;
+        width: 90%;
+    }
+
+    #sepete-eklendi-btn{
+        position: relative;
+        left: 0;
+    }
+    
+    #sepete-eklendi-pencere{
+        position: absolute;
+        left: 5%;
+        top: 40%;
+        width: 90%;
+    }
+    #sepete-ekle-geri-btn{
+        position: relative;
+        left: 0;
+    }
+    .hizli-siparis-penceresi{
+        position: absolute;
+        scale: 80%;
+        left: -15px;
+        margin: 0;
+    }
+
+    .hizli-siparis-evet{
+        position: relative;
+        left: 0%;
+        width: 50%;
+        padding: 8px;
+        border-radius: 15px;
+        font-size: 17px;
+    }
+    .hizli-siparis-hayir{
+        position: relative;
+        left: 0%;
+        width: 50%;
+        padding: 8px;
+        border-radius: 15px;
+        font-size: 17px;
+    }
+
+    .yapay-zeka-sesli-pencere{
+        position: absolute;
+        left: 3%;
+        top: 30%;
+    }
+    #sesli-sohbet-btn{
+        position: absolute;
+        width: 30%;
+        left: 0%;
+    }
+    #sesli-sohbeti-kapat{
+        position:absolute;
+        width: 30%;
+        left: 40%;
+    }
+
+    .yapay-zeka-yazili-pencere{
+        position: absolute;
+        left: 3%;
+        top: 30%;
+    }
+    
+    #yapay-zeka-mesaj-yaz{
+        position: relative;
+        left: 10px;
+    }
+    #yazili-sohbet-btn{
+        padding: 5px;
+        width: 20%;
+        margin: 0;
+        display: inline-block;
+        position: absolute;
+        left: 300px;
+        bottom: 20px;
+    }
+    #sohbeti-kapat{
+        position: absolute;
+        display: inline-block;
+        margin: 0;
+        width: 20%;
+        padding: 5px;
+        bottom: -15px;
+        left: 300px;
+        
+    }
+
+    .sikayet-pencere{
+        position: absolute;
+        left: -10px;
+        scale: 90%;
+    }
+    #sikayet-gonder{
+        width: 25%;
+    }
+    
+    
+}
+
+

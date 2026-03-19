@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciela AI Coffee</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="karanlik-tema">
+
+    <!-- Üst Kısım (Header) -->
+    <header > 
+
+        <div>
+        <div class="logo">
+            <img src="/images/Ciela AI Coffee.jpg" alt="Resim yüklenemedi.." style="max-width: 100%; border-radius: 50%;">
+        </div>
+        </div>  
+        <a href="index.html"><h3>Ana Sayfa</h3> </a>
+        <h2 >Ciela AI Coffee</h2>
+
+    </header>
+
+    <!--  Yan bar kısmı -->
+    <div class="yan-bar-isareti">☰</div>
+
+    <div class="yan-bar" id="yan-bar">
+    
+        <button id="tema-buton">🌙</button>
+         
+        <div class="yan-bar-bilgi">
+            <p>Masa Bilgileri</p>
+            <h3>Masa Numarası:</h3>
+            <h3>Açılış Saati:</h3>
+            <div class="buton-container">
+                <button class="yanbar-btn1" id="masaDegistirBtn">Masa değiştir</button>
+                <button class="yanbar-btn2" id="garson-cagir">Garson Çağır</button>
+            </div>
+        </div>
+
+        <div class="yan-bar-bilgi">
+            <p>Sipariş Bilgileri</p>
+            <h3>Toplam Tutar:</h3>
+            <div class="buton-container">
+                <button class="yanbar-btn1" id="siparis-detaylari-btn">Sipariş Detayları</button>
+                <button class="yanbar-btn2" id="siparis-takibi-btn">Sipariş Takibi</button>
+            </div>
+        </div>
+
+        <div class="yan-bar-bilgi">  
+           <p>Ödeme Bilgileri</p>
+           <h3>Kalan Tutar:</h3>
+           <div class="buton-container">
+            <button class="yanbar-btn1">Kart-Nakit ödeme</button>
+            <button class="yanbar-btn2">Online ödeme</button>
+           </div>
+        </div>
+
+        <div class="yan-bar-bilgi">
+            <p>Sepet Bilgileri</p>
+            <div class="buton-container">
+                <button id="sepet-ac" class="yanbar-btn1">Sepet Detayı</button>
+                <button id="sepet-onayla" class="yanbar-btn2">Sepeti Onayla</button>
+            </div>
+        </div>
+
+        <div class="yan-bar-bilgi">
+            <p>Yapay Zeka</p>
+            <div class="buton-container">
+                <button id="yapay-zeka-sesli-Btn" class="yanbar-btn1">Sesli Sohbet</button>
+                <button class="yanbar-btn2" id="yapay-zeka-yazili-Btn">Yazılı Sohbet</button>
+            </div>
+        </div>       
+
+    <div id="yan-bar-bilgi-sikayet"class="yan-bar-bilgi">
+        <p>Müşteri Şikayetleri</p>
+        <div class="buton-container">
+            <button class="yanbar-btn1" id="sikayet-btn">Şikayet et</button>
+        </div>
+    </div>
+         
+</div>
+
+
+    <!--   Masa değiştirme kısmı -->
+       <div class="masa-paneli" id="masa-panel"> 
+        <h3 style="position: absolute; top: 10px; right: 20px;">Giriş|</h3>
+        <button class="masabuton-tip1" style="top: 10px; left: 30px;">1</button>
+        <button class="masabuton-tip1" style="top: 10px; left: 90px;">2</button>
+        <button class="masabuton-tip1" style="top: 10px; left: 150px;">3</button>
+        <button class="masabuton-tip1" style="top: 10px; left: 210px;">4</button>
+        <button class="masabuton-tip2" style="top: 80px; right: 120px;">5</button>
+        <h3 style=" position:absolute; top: 80px; left: 20px;">WC|</h3>
+        <h3 style="position:absolute; top: 140px; left: 20px;">Kasa|</h3>   
+        <button class="masabuton-tip1" style="top: 80px; right: 50px;">6</button>
+        <button class="masabuton-tip2" style="top: 140px; right: 120px;">7</button>
+        <button class="masabuton-tip1" style="top: 140px; right: 50px;">8</button>
+        <button class="masabuton-tip2" style="top: 200px; right: 120px;">9</button>
+        <button class="masabuton-tip1" style="top: 200px; right: 50px;">10</button>
+        <button class="masabuton-tip1" style="bottom:125px; left: 25px;">11</button>
+        <button class="masabuton-tip1" style="bottom:125px; left: 90px;">12</button>
+        <h3 style="position: absolute; bottom: 60px; left:20px;">Masa değiştirme talebini onaylıyor musunuz?</h3>
+        <button class="yanbar-btn1" id="masadegistirEvet" style="position:absolute; bottom: 30px; left: 110px; padding: 10px 15px;">Evet</button>
+        <button class="yanbar-btn2" id="masadegistirHayir" style="position:absolute; bottom: 30px; right: 110px; padding: 10px 15px;">Hayır</button>
+       </div>
+
+        <!-- Garson çağırma penceresi -->
+
+    <div id="garson-cagir-pencere" class="pencere">
+
+        <h2>Garson çağırmayı onaylıyor musunuz?</h2>
+        <button class="yanbar-btn1" id="garson-evet">Evet</button>
+        <button class="yanbar-btn2" id="garson-hayir">Hayır</button>
+
+    </div>
+
+   
+   
+
+    <!--Sepeti görüntüleme kısmı-->
+
+    <div class="pencere" id="sepet-pencere">
+           
+           <div class="sepet-icerik">
+                <div class="sepet-urun">
+                 <div class="sepet-urun-img">
+                     <img src="/images/hamburger2.jpeg" alt="Resim yüklenemedi!">
+                 </div>
+                 <div class="sepet-urun-icerik">
+                       <h3>Hamburger</h3>
+                       <p>Fiyat:220TL</p>
+                       <p class="sepet-urun-miktar">6x 1320TL</p>
+                 </div>
+                </div>
+
+                <div class="sepet-urun">
+                    <div class="sepet-urun-img">
+                        <img src="/images/efsane5lipizza.png" alt="Resim yüklenemedi!">
+                    </div>
+                    <div class="sepet-urun-icerik">
+                          <h3>Pizza</h3>
+                          <p>Fiyat:250TL</p>
+                          <p class="sepet-urun-miktar">1x 250TL</p>
+                    </div>
+                   </div>
+            
+           </div>
+           <div class="sepet-tamam">
+            <h3>Sepet Toplam : 1570 TL </h3>
+            <button class="yanbar-btn2" id="sepet-goruntule-tamam">Tamam</button>
+          </div> 
+    </div>
+
+<!--Sipariş detayları kısmı (Bu kısmı sepet detayı kısmı ile aynı classlardan oluşturdum.)-->
+
+<div id="siparis-detaylari-pencere" class="pencere" style="padding-bottom:40px ;">
+    <div class="sepet-icerik">
+     <div class="sepet-urun">
+         <div class="sepet-urun-img">
+             <img src="/images/hamburger2.jpeg" alt="Resim yüklenemedi!">
+         </div>
+         <div class="sepet-urun-icerik">
+               <h3>Hamburger</h3>
+               <p> 220TL</p>
+                 <div class="sepet-urun-miktar">
+                     <p >2x</p>
+                     <p >440TL</p>
+                 </div>
+         </div>
+        </div>
+    </div>
+    <div class="sepet-tamam">
+        <button class="yanbar-btn2" id="siparis-detay-tamam" style="position: absolute; bottom: -45px;">Tamam</button>
+      </div> 
+</div>
+
+<!-- Sipariş Takibi kısmı -->
+
+<div id="siparis-takibi-pencere" class="pencere" style="padding-bottom:40px ;">
+    <div class="sepet-icerik">
+     <div class="sepet-urun">
+         <div class="sepet-urun-img">
+             <img src="/images/hamburger2.jpeg" alt="Resim yüklenemedi!">
+         </div>
+         <div class="sepet-urun-icerik">
+               <h3>Hamburger</h3>
+               <p>220TL</p>
+         </div>
+               <p class="siparis-urun-durum">Hazırlanıyor</p>
+        </div>
+
+        <div class="sepet-urun">
+            <div class="sepet-urun-img">
+                <img src="/images/hamburger2.jpeg" alt="Resim yüklenemedi!">
+            </div>
+            <div class="sepet-urun-icerik">
+                  <h3>Hamburger</h3>
+                  <p>220TL</p>
+            </div>
+                  <p class="siparis-urun-durum">Sipariş Alındı</p>
+           </div>
+           <div class="sepet-urun">
+            <div class="sepet-urun-img">
+                <img src="/images/hamburger2.jpeg" alt="Resim yüklenemedi!">
+            </div>
+            <div class="sepet-urun-icerik">
+                  <h3>Hamburger</h3>
+                  <p>220TL</p>
+            </div>
+                  <p class="siparis-urun-durum">Teslim Edildi</p>
+           </div>
+
+    </div>
+    <div class="sepet-tamam">
+        <button class="yanbar-btn2" id="siparis-takibi-tamam" style="position: absolute; bottom: -45px;">Tamam</button>
+      </div> 
+
+</div>
+
+    <!--Sepet Onayı kısmı -->
+
+    <div id="sepet-onay-pencere" class="pencere"> 
+        <div class="pencere-icerik">       
+              <h2>Sepeti Onaylıyor musunuz?</h2>
+              <textarea placeholder="Sepet notunuz.." class="siparis-notu"></textarea>
+              <button id="onay-evet" class="yanbar-btn1">Evet</button>
+              <button  id="onay-hayir" class="yanbar-btn2">Hayır</button>
+        </div>
+    </div>
+
+     <div id="sepet-onaylandi-pencere" >
+        <h2>Sepet onaylandı ✅</h2>
+        <div class="zaman-cubugu-kapsayici">
+            <div class="zaman-cubugu"></div>
+          </div>
+     </div> 
+
+    <!--Yapay Zeka sesli sohbet kısmı -->
+
+     <div id="yapay-zeka-ses-penceresi" class="yapay-zeka-sesli-pencere">
+        <div class="yapay-zeka-pencere-icerik">         
+        </div>
+           <div class="yapay-zeka-butonlari">
+            <button class="yanbar-btn1" id="sesli-sohbet-btn" style="margin-right: 100px; padding: 15px 10px;font-size: 17px; border-radius: 30px;">Mikrofon</button>
+             <button class="yanbar-btn2" id="sesli-sohbeti-kapat" style="padding: 15px 10px; font-size: 17px; border-radius:30px ;">Tamam</button>
+           </div>
+     </div>
+
+     <!-- Yapay Zeka yazılı sohbet kısmı-->
+               
+     <div id="yapay-zeka-yazi-penceresi" class="yapay-zeka-yazili-pencere">
+        <div class="yapay-zeka-pencere-icerik"> 
+        </div>
+        <div class="yapay-zeka-sohbet">
+            <input type="text" name="Sohbet et.." placeholder="Mesaj yaz.." id="yapay-zeka-mesaj-yaz">
+             <button class="yanbar-btn2" id="yazili-sohbet-btn">Gönder</button>
+             <button class="yanbar-btn2" id="sohbeti-kapat">Kapat</button>
+            </div>
+     </div>
+
+     <!--Şikayet butonu kısmı-->
+     
+     <div id="sikayet-penceresi" class="sikayet-pencere">
+        <div class="sikayet-penceresi-icerik">
+          <span class="sikayet-kapat" id="sikayet-kapama">&times;</span>
+          <h2>Şikayet Menüsü</h2>
+          <form>
+            <p>Şikayetiniz:</p>
+            <textarea id="sikayet-metin" name="sikayet-metin" rows="6" placeholder="Şikayetinizi buraya yazınız..."></textarea>
+            <button id="sikayet-gonder">Gönder</button>
+          </form>
+        </div>
+      </div> 
+     
+
+    <!-- Menü Konteyneri -->
+     <div class="menu">
+
+        <!--Tasarımda kullandığım görselin boyutu : 1310-737 -->
+
+        <div  class="menu-container">
+    <a href="fastfood.html" class="menu-link">
+         <img class="menu-container-image" src="images/hamburger.jpg" alt="Resim yüklenemedi...">
+        <h1 >Fast Food</h1>
+    </a>
+        </div> 
+    
+        <div class="menu-container">
+            <a href="tatlilar.html" class="menu-link">
+                  <img class="menu-container-image" src="images/hamburger.jpg" alt="Resim yüklenemedi...">
+                  <h1>Tatlılar</h1>
+            </a>
+              </div>    
+
+      
+      <div class="menu-container">
+    <a href="icecekler.html" class="menu-link">      
+          <img class="menu-container-image" src="images/hamburger.jpg" alt="Resim yüklenemedi...">    
+          <h1>İçecekler</h1>
+    </a>
+      </div>
+
+     
+      <div class="menu-container">
+        <a href="kahveler.html" class="menu-link">
+              <img class="menu-container-image" src="images/hamburger.jpg" alt="Resim yüklenemedi...">
+              <h1>Kahveler</h1>
+        </a>
+          </div> 
+         
+
+      <div class="menu-container">
+    <a href="anayemekler.html" class="menu-link">
+          <img class="menu-container-image" src="images/hamburger.jpg" alt="Resim yüklenemedi...">
+          <h1>Ana Yemekler</h1>
+    </a>
+      </div> 
+
+
+      <div class="menu-container">
+    <a href="turkkahveleri.html" class="menu-link">
+              <img class="menu-container-image" src="images/hamburger.jpg" alt="Resim yüklenemedi...">
+              <h1>Türk Kahveleri</h1>
+    </a>
+      </div>       
+    
+      <div class="menu-container">
+    <a href="dondurmalar.html" class="menu-link">
+              <img class="menu-container-image" src="images/hamburger.jpg" alt="Resim yüklenemedi...">
+              <h1>Dondurmalar</h1>
+    </a>
+        </div> 
+
+
+        <div class="menu-container">
+    <a href="atistirmaliklar.html" class="menu-link">
+                  <img class="menu-container-image" src="images/hamburger.jpg" alt="Resim yüklenemedi...">
+                  <h1>Atıştırmalıklar</h1>
+    </a>
+        </div> 
+
+</div>
+
+<!--    Sepete Ekle Kısmı -->
+
+<div class="pencere" id="sepete-ekle-pencere">
+    <h2 style="margin-bottom: 30px;">Sipariş notu </h2>
+    <textarea placeholder="Sipariş notunuz.." class="siparis-notu" ></textarea>
+    <button class="yanbar-btn2" id="sepete-eklendi-btn">Sepete Ekle</button>
+    <button class="yanbar-btn2" id="sepete-ekle-geri-btn">Geri</button>
+</div>
+
+<div id="sepete-eklendi-pencere" >
+    <h2>Sepete Eklendi ✅</h2>
+    <div class="zaman-cubugu-kapsayici">
+        <div class="zaman-cubugu"></div>
+      </div>
+ </div> 
+
+    <script src="js/script.js" defer></script>
+    <script src="js/tema.js" defer></script>
+</body>
+</html>
